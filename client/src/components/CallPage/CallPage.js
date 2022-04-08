@@ -144,17 +144,7 @@ const CallPage = () => {
       })
       .catch(() => { });
   };
-
-
-//   function hideCam() {
-//     const videoTrack = userStream.getTracks().find(track => track.kind === 'video');
-//     videoTrack.enabled = false;
-// }
-
-// function showCam() {
-//     const videoTrack = userStream.getTracks().find(track => track.kind === 'video');
-//     videoTrack.enabled = true;
-// }
+  
 
   const sendMsg = (msg) => {
     peer.send(msg);
@@ -220,13 +210,13 @@ const CallPage = () => {
   return (
     <div className="callpage-container">
       <video className="video-container" src="" controls></video>
-
       <CallPageHeader
         isMessenger={isMessenger}
         setIsMessenger={setIsMessenger}
         messageAlert={messageAlert}
         setMessageAlert={setMessageAlert}
       />
+      
       <CallPageFooter
         isPresenting={isPresenting}
         stopScreenShare={stopScreenShare}
